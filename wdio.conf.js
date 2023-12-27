@@ -319,7 +319,7 @@ export const config = {
         //     })
         // })
     
-        //  },
+        //},
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
