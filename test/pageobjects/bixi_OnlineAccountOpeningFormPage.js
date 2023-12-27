@@ -74,16 +74,13 @@ class OpenAccount
     }
 
     // Business Logic
-    c
-
-
     async select_Dropdown(GENDER,STATE,CITY,ACCOUNTTYPE)
     {
         await this.Gender.selectByVisibleText(GENDER)
         await this.State.selectByVisibleText(STATE)
         await this.City.selectByVisibleText(CITY)
         await this.AccType.selectByVisibleText(ACCOUNTTYPE)
-        await browser.pause(3000)
+        await this.Submit.click()
     }
 
     async EnterDetails(NAME,MOB,EMAIL,LANDLINE,DOB,PAN,CITIZENNO,HOMEADDRESS,OFFICEADDRESS,PIN,AREA,NOMINEENAME,NOMINEEACCNO)
@@ -101,8 +98,6 @@ class OpenAccount
         await this.Area.setValue(AREA)
         await this.NomineeName.setValue(NOMINEENAME)
         await this.NomineeAccNo.setValue(NOMINEEACCNO)
-        await browser.pause(3000)
-        //await this.Submit.click()
     }
 }
 
