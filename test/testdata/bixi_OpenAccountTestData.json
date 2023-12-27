@@ -1,0 +1,20 @@
+{
+    "name" : "neyaz",
+    "gender" : "Male",
+    "mobile" : "1234567890",
+    "email" : "abcdef@gmail.com",
+    "landline" : "2462866",
+    "dob" : "9/12/1996",
+    "pan" : "ACBS5654",
+    "citizenshipno" : "US1234",
+    "homeaddress" : "LasVegas",
+    "officeaddress" : "Calofirnia",
+    "us" : "NA",
+    "state" : "California",
+    "city" : "Houston",
+    "pin" : "90210",
+    "area" : "Calofirnia",
+    "nomineename" : "Zayen",
+    "nomineeaccno" : "65465465465", 
+    "accounttype" : "Saving"
+}
