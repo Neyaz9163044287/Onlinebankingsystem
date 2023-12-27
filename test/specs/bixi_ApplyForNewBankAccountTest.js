@@ -43,7 +43,7 @@ describe('Bixi_Suite03', () =>{
             }
         }
         console.log("<<<<---------------------- APPLICATION NUMBER IS ------------------->>>> : "+appno);
-        expect(appno).to.have.lengthOf(10)
+        expect(appno).to.have.lengthOf(10);
         await browser.acceptAlert();      
     })
 })
