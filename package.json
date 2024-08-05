@@ -10,7 +10,7 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
-    "login" : "npx wdio run ./wdio.conf.js --spec test/specs/bixi_StaffLoginTest.js",
+    "login" : "qtest/specs/bixi_StaffLoginTest.js",
     "allurereport"  : "npx allure generate --clean allure-results",
     "launchreport"  : "npx allure open",
     "generateandlaunchreport" : "npx allure generate --clean allure-results ; npx allure open"

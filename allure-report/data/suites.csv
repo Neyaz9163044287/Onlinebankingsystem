@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Wed May 22 13:06:03 IST 2024","Wed May 22 13:06:12 IST 2024","8848","","Suite01","","","","Login Test",""
+"passed","Wed Dec 27 17:33:29 IST 2023","Wed Dec 27 17:33:41 IST 2023","11828","","BuildBO1","","","","Staff Login Page",""
+"failed","Wed Dec 27 17:33:47 IST 2023","Wed Dec 27 17:33:54 IST 2023","7304","","Bixi_Suite03","","","","Apply For New Bank Account",""
+"passed","Wed May 22 13:11:07 IST 2024","Wed May 22 13:11:11 IST 2024","4164","","Suite01","","","","Handling Frames",""
+"broken","Thu Aug 01 12:38:21 IST 2024","Thu Aug 01 12:38:42 IST 2024","21306","","Orange HRM Login Page","","","","Name",""

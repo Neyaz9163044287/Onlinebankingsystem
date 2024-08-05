@@ -25,7 +25,11 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+       // './test/specs/**/*.js',
+        './test/specs/bixi_StaffLoginTest.js',
+        './test/specs/bixi_ApplyForNewBankAccountTest.js',
+        './test/specs/bixi_InternetBankingLogin_Statement.js'
+
     ],
     // Patterns to exclude.
     exclude: [
@@ -60,11 +64,11 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome',
+        browserName: 'firefox',
         maxInstances: 1,
     }
     // {
-    //     browserName: 'firefox',
+    //     browserName: 'chrome',
     //     maxInstances: 1,
     // }
     // {
@@ -98,7 +102,7 @@ export const config = {
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail: 1,
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -299,27 +303,27 @@ export const config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-        //  onComplete: function(exitCode, config, capabilities, results) {
-        //     const reportError = new Error('Could not generate Allure report')
-        // const generation = allure(['generate', 'allure-results', '--clean'])
-        // return new Promise((resolve, reject) => {
-        //     const generationTimeout = setTimeout(
-        //         () => reject(reportError),
-        //         5000)
+         onComplete: function(exitCode, config, capabilities, results) {
+            const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
 
-        //     generation.on('exit', function(exitCode) {
-        //         clearTimeout(generationTimeout)
+            generation.on('exit', function(exitCode) {
+                clearTimeout(generationTimeout)
 
-        //         if (exitCode !== 0) {
-        //             return reject(reportError)
-        //         }
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
 
-        //         console.log('Allure report successfully generated')
-        //         resolve()
-        //     })
-        // })
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
     
-        //},
+        },
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
